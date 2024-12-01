@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <h1 class="text">
+      DHARSHAN!
+      <h2 class="text">Books I’ve Read</h2>
+
+      <h3 class="text-b">
+        I created this page to help me remember the valuable lessons and insights from the books I’ve read. Here, I’ll include summaries and key takeaways for easy reference.
+      </h3>
+      
+      <h3 class="text-w" >Sort By  <a href="/sortbyname" method="get">name</a>   <a href="/sortbydate" method="get">date</a>.</h3>
+      <form action="/submit" method="post">
+        <button class="add">Add New Book </button>
+      </form>
+
+      <hr />
+      <h1 style="text-align: center; color:#e0b400 ;">
+        Book Summaries
+      </h1>
+      <%for (let books of listreadbooks){ %> 
+      <div class="item-container">
+        <img
+          src="https://covers.openlibrary.org/b/olid/<%= books.coverkey %>-M.jpg"
+        />
+        <form action="/delete" method="post">
+          <button class="r-btn" name="deleteItemId" value="<%= books.id %>">remove</button>
+        </form>
+        <h1 class="text-title" name="bookname"><%= books.book_name %></h1>
+
+        <h3 class="text-d" ><%= books.date %></h3>
+        <br />
+        <P class="text-g" style="font-weight: bolder;"> <%= books.about %></P>
+        
+      </div><hr>
+
+      <%} %>
+    </h1>
+  </body>
+</html>

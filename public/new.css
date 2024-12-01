@@ -1,0 +1,38 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300);
+* {
+  box-sizing: border-box;
+}
+body {
+  position: absolute;
+  top: 40%;
+  left: 43%;
+  transform: translate(-35%, -35%);
+  font-family: "Roboto";
+  color: #ffffff;
+}
+
+input{
+    height: 30px;
+    width: 500px;
+    
+}
+.i-2{
+    height: 300px;
+    width: 500px;
+}
+
+button{
+    background-color: #e0b400;
+    border: 0ch;
+    margin-top:20px;
+    font-weight: bolder;
+    position: absolute;
+    left: 38%;
+    height: 30PX;
+    width: 50PX;
+    border-radius: 5px;
+    
+}
+h1{
+    color: #e0b400;
+}
