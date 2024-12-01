@@ -23,8 +23,8 @@ Run the following SQL command in your database to create the required table:
 
 CREATE TABLE readbooks (
 id SERIAL PRIMARY KEY,
-book_name TEXT VARCHAR(150),
-about TEXT VARCHAR(1000),
+book_name  VARCHAR(150),
+about  VARCHAR(1000),
 date TIMESTAMP,
 coverkey VARCHAR(20)
 );
